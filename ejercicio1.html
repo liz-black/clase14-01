@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Ejercicios con FOR</title>
+
+<style>
+body{
+    font-family: Arial;
+    background: linear-gradient(135deg,#cdb4db,#9d4edd);
+    padding:20px;
+}
+h1{
+    text-align:center;
+    color:white;
+}
+.contenedor{
+    background:#f8f0ff;
+    max-width:950px;
+    margin:auto;
+    padding:25px;
+    border-radius:20px;
+}
+.ejercicio{
+    background:white;
+    padding:15px;
+    margin-bottom:15px;
+    border-radius:15px;
+    border-left:6px solid #9d4edd;
+}
+button{
+    background:#9d4edd;
+    color:white;
+    border:none;
+    padding:8px 15px;
+    border-radius:10px;
+    cursor:pointer;
+}
+input, select{
+    padding:6px;
+    border-radius:8px;
+    margin:5px;
+}
+.resultado{
+    margin-top:10px;
+    background:#ede2ff;
+    padding:10px;
+    border-radius:10px;
+    white-space:pre-line;
+}
+.pseudocodigo{
+    background:#f3e5f5;
+    border-left:5px solid #8e24aa;
+    padding:15px;
+    font-family:monospace;
+}
+.img-ej{
+    width:80%;
+    max-width:400px;
+    display:block;
+    margin:10px auto;
+    border-radius:10px;
+    border:3px solid #b57edc;
+}
+</style>
+</head>
+
+<body>
+
+<h1>💜 Ejercicios con FOR 💜</h1>
+
+<div class="contenedor">
+
+<!-- 1 -->
+<div class="ejercicio">
+<h3>1️⃣ Números del 1 al 50</h3>
+<button onclick="ej1()">Mostrar</button>
+<div id="respuesta1" class="resultado"></div>
+</div>
+
+<!-- 2 -->
+<div class="ejercicio">
+<h3>2️⃣ Números del 50 al 1</h3>
+<button onclick="ej2()">Mostrar</button>
+<div id="respuesta2" class="resultado"></div>
+</div>
+
+<!-- 3 -->
+<div class="ejercicio">
+<h3>3️⃣ Suma del 1 al 20</h3>
+<button onclick="ej3()">Calcular</button>
+<div id="respuesta3" class="resultado"></div>
+</div>
+
+<!-- 4 -->
+<div class="ejercicio">
+<h3>4️⃣ Tabla del 9</h3>
+<button onclick="ej4()">Mostrar</button>
+<div id="respuesta4" class="resultado"></div>
+</div>
+
+<!-- 5 -->
+<div class="ejercicio">
+<h3>5️⃣ Cantidad de números pares del 1 al 100</h3>
+<button onclick="ej5()">Contar</button>
+<div id="respuesta5" class="resultado"></div>
+</div>
+
+<!-- 6 -->
+<div class="ejercicio">
+<h3>6️⃣ Múltiplos de 3 hasta 30</h3>
+<button onclick="ej6()">Mostrar</button>
+<div id="respuesta6" class="resultado"></div>
+</div>
+
+<!-- 7 -->
+<div class="ejercicio">
+<h3>7️⃣ Letras de un nombre</h3>
+<input id="nombre7" placeholder="Ingresa tu nombre">
+<br>
+<button onclick="ej7()">Mostrar</button>
+<div id="respuesta7" class="resultado"></div>
+</div>
+
+<!-- 8 -->
+<div class="ejercicio">
+<h3>8️⃣ Factorial</h3>
+<input type="number" id="num8" placeholder="Ingresa un número">
+<br>
+<button onclick="ej8()">Calcular</button>
+<div id="respuesta8" class="resultado"></div>
+</div>
+
+<!-- 9 -->
+<div class="ejercicio">
+<h3>9️⃣ Promedio de 5 números</h3>
+<input id="n1"><input id="n2"><input id="n3">
+<input id="n4"><input id="n5">
+<br>
+<button onclick="ej9()">Calcular</button>
+<div id="respuesta9" class="resultado"></div>
+</div>
+
+<!-- 10 -->
+<div class="ejercicio">
+<h3>🔟 Cantidad de números mayores a 10</h3>
+<input id="m1"><input id="m2"><input id="m3">
+<input id="m4"><input id="m5">
+<br>
+<button onclick="ej10()">Contar</button>
+<div id="respuesta10" class="resultado"></div>
+</div>
+
+<!-- 11 -->
+<div class="ejercicio">
+<h3>1️⃣1️⃣ Generador de Password</h3>
+<input id="nombre11" placeholder="Ingresa tu nombre">
+<br>
+<button onclick="ej11()">Generar</button>
+<div id="respuesta11" class="resultado"></div>
+</div>
+
+<!-- 12 -->
+<div class="ejercicio">
+<h3>1️⃣2️⃣ Sumatoria de la serie 1 + 4 + 9 + 16 + … + n</h3>
+
+<label>Ingrese la cantidad de términos:</label>
+<input type="number" id="n12" min="1">
+
+<br><br>
+
+<button onclick="ej12()">Calcular sumatoria</button>
+
+<div id="respuesta12" class="resultado"></div>
+
+<!-- PSEUDOCÓDIGO -->
+<pre class="pseudocodigo">
+INICIO
+    LEER n
+    suma ← 0
+
+    PARA i ← 1 HASTA n HACER
+        suma ← suma + (i * i)
+    FIN PARA
+
+    MOSTRAR suma
+FIN
+</pre>
+
+<img src="11.jpeg" alt="Diagrama de flujo del ejercicio 12" class="img-ej">
+</div>
+
+
+<!-- 13 -->
+<div class="ejercicio">
+<h3>1️⃣3️⃣ Producto de la serie 1 · 1/2 · 1/3 · … · 1/n</h3>
+
+<label>Ingrese el valor de n:</label>
+<input type="number" id="n13" min="1">
+
+<br><br>
+
+<button onclick="ej13()">Calcular producto</button>
+
+<div id="respuesta13" class="resultado"></div>
+
+<!-- PSEUDOCÓDIGO -->
+<pre class="pseudocodigo">
+INICIO
+    LEER n
+    producto ← 1
+
+    PARA i ← 1 HASTA n HACER
+        producto ← producto * (1 / i)
+    FIN PARA
+
+    MOSTRAR producto
+FIN
+</pre>
+
+<img src="12.jpeg" alt="Diagrama de flujo del ejercicio 13" class="img-ej">
+</div>
+
+
+<!-- 14 -->
+<div class="ejercicio">
+<h3>1️⃣4️⃣ Porcentaje de animales por edad</h3>
+
+<label>Selecciona animal:</label>
+<select id="animal14">
+    <option value="elefante">Elefante (20)</option>
+    <option value="jirafa">Jirafa (15)</option>
+    <option value="chimpance">Chimpancé (40)</option>
+</select>
+<br><br>
+<button onclick="generarCampos14()">Generar campos</button>
+<div id="edades14"></div>
+<br>
+<button onclick="ej14()">Calcular porcentajes</button>
+<div id="respuesta14" class="resultado"></div>
+</div>
+
+
+</div>
+
+<script>
+function ej1(){
+    let r="";
+    for(let i=1;i<=50;i++) r+=i+" ";
+    respuesta1.innerText=r;
+}
+
+function ej2(){
+    let r="";
+    for(let i=50;i>=1;i--) r+=i+" ";
+    respuesta2.innerText=r;
+}
+
+function ej3(){
+    let s=0;
+    for(let i=1;i<=20;i++) s+=i;
+    respuesta3.innerText="La suma es: "+s;
+}
+
+function ej4(){
+    let r="";
+    for(let i=1;i<=12;i++) r+=`9 x ${i} = ${9*i}\n`;
+    respuesta4.innerText=r;
+}
+
+function ej5(){
+    let c=0;
+    for(let i=1;i<=100;i++) if(i%2==0) c++;
+    respuesta5.innerText=c;
+}
+
+function ej6(){
+    let r="";
+    for(let i=3;i<=30;i+=3) r+=i+" ";
+    respuesta6.innerText=r;
+}
+
+function ej7(){
+    let r="";
+    for(let l of nombre7.value) r+=l+"\n";
+    respuesta7.innerText=r;
+}
+
+function ej8(){
+    let f=1;
+    for(let i=1;i<=num8.value;i++) f*=i;
+    respuesta8.innerText=f;
+}
+
+function ej9(){
+    let s=0;
+    let a=[n1,n2,n3,n4,n5];
+    for(let x of a) s+=parseFloat(x.value);
+    respuesta9.innerText=s/5;
+}
+
+function ej10(){
+    let c=0;
+    let a=[m1,m2,m3,m4,m5];
+    for(let x of a) if(x.value>10) c++;
+    respuesta10.innerText=c;
+}
+
+function ej11(){
+    let n=nombre11.value.toLowerCase();
+    respuesta11.innerText=
+    n.length +
+    ((n.length%2==0)?"t":"c") +
+    n[n.length-1] +
+    ("aeiou".includes(n[n.length-1])?"$":"%") +
+    n.substring(0,3);
+}
+
+function ej12(){
+    let n = parseInt(document.getElementById("n12").value);
+    let suma = 0;
+
+    for(let i = 1; i <= n; i++){
+        suma += (i * i);
+    }
+
+    respuesta12.innerText =
+    "La sumatoria de la serie es: " + suma;
+}
+
+
+function ej13(){
+    let n = parseInt(document.getElementById("n13").value);
+    let producto = 1;
+
+    for(let i = 1; i <= n; i++){
+        producto *= (1 / i);
+    }
+
+    respuesta13.innerText =
+    "El producto de la serie es: " + producto;
+}
+
+
+function generarCampos14(){
+    let animal = animal14.value;
+    let total = (animal=="elefante")?20:(animal=="jirafa")?15:40;
+    let html = "<h4>Ingrese las edades:</h4>";
+
+    for(let i=1;i<=total;i++){
+        html += `Animal ${i}: <input type="number" id="edad${i}" min="0"><br>`;
+    }
+
+    edades14.innerHTML = html;
+}
+
+function ej14(){
+    let animal = animal14.value;
+    let total = (animal=="elefante")?20:(animal=="jirafa")?15:40;
+
+    let c1=0, c2=0, c3=0;
+
+    for(let i=1;i<=total;i++){
+        let edad = parseFloat(document.getElementById("edad"+i).value);
+
+        if(edad <= 1) c1++;
+        else if(edad < 3) c2++;
+        else c3++;
+    }
+
+    respuesta14.innerText =
+    "0 a 1 año: " + (c1*100/total).toFixed(2) + "%\n" +
+    "1 a 3 años: " + (c2*100/total).toFixed(2) + "%\n" +
+    "3 años o más: " + (c3*100/total).toFixed(2) + "%";
+}
+
+</script>
+
+</body>
+</html>
